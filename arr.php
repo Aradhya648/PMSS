@@ -12,8 +12,8 @@ namespace PMSS;
 
 final class ArrInstaller
 {
-    private string $installRoot;
-    private string $tmpDir;
+    private $installRoot;
+    private $tmpDir;
 
     public function __construct(string $installRoot)
     {
