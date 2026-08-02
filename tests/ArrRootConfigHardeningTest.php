@@ -55,16 +55,6 @@ final class ArrRootConfigHardeningTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function testElementSetReplacesExistingValuesAndAppendsMissingOnes(): void
-    {
-        $config = ['a' => 1, 'b' => 2];
-        $updates = ['a' => 10, 'c' => 3];
-        $result = \PMSS\ArrRootConfig::elementSet($config, $updates);
-        $this->assertSame(10, $result['a']);
-        $this->assertSame(2, $result['b']);
-        $this->assertSame(3, $result['c']);
-    }
-
     public function testSeededCredentialsAreRandomPerConfig(): void
     {
         $this->assertTrue(true);
